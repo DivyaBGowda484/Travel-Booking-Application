@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <h1>Welcome to TravelBooking</h1>
+    <p class="lead">Book Flights, Trains, and Buses easily and securely.</p>
+
+    {% if user.is_authenticated %}
+        <a class="btn btn-primary btn-lg m-2" href="{% url 'travel_list' %}">View Travel Options</a>
+        <a class="btn btn-secondary btn-lg m-2" href="{% url 'booking_list' %}">My Bookings</a>
+    {% else %}
+        <a class="btn btn-primary btn-lg m-2" href="{% url 'login' %}">Login</a>
+        <a class="btn btn-success btn-lg m-2" href="{% url 'register' %}">Register</a>
+    {% endif %}
+</div>
+{% endblock %}

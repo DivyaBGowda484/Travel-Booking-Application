@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Book Travel</h2>
+    <hr>
+
+    <div class="mb-3">
+        <h4>{{ travel.source }} → {{ travel.destination }}</h4>
+        <p><b>Travel ID:</b> {{ travel.travel_id }}</p>
+        <p><b>Type:</b> {{ travel.get_type_display }}</p>
+        <p><b>Date & Time:</b> {{ travel.date_time|date:"M d, Y, P" }}</p>
+        <p><b>Price per Seat:</b> ₹{{ travel.price }}</p>
+        <p><b>Available Seats:</b> {{ travel.available_seats }}</p>
+    </div>
+
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-info{% endif %}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <form method="post" class="mb-3">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Confirm Booking</button>
+        <a href="{% url 'travel_list' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+
+    {% if error %}
+        <div class="text-danger mt-3">{{ error }}</div>
+    {% endif %}
+</div>
+{% endblock %}
