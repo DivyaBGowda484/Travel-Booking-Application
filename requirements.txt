@@ -2,4 +2,5 @@ asgiref==3.9.1
 bootstrap4==0.1.0
 Django==5.2.5
 mysqlclient==2.2.7
+psycopg2-binary==2.9.10
 sqlparse==0.5.3
