@@ -53,8 +53,8 @@ python manage.py runserver
 
 ---
 
-## 🌐 Live On
+## 🌐 Live On  
 
 You can access the deployed Travel Booking Application here:  
-[Travel Booking Application - Live]([https://travel-booking-application-pyz1.onrender.com](https://travel-booking-application-gc6n.onrender.com))
+[Travel Booking Application - Live](https://travel-booking-application-gc6n.onrender.com)  
 
