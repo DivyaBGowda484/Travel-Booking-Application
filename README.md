@@ -23,8 +23,8 @@ A **Django-based Travel Booking Application** that allows users to search, filte
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/<your-username>/travel-booking.git
-   cd travel-booking
+   git clone https://github.com/<your-username>/Travel-Booking-Application.git
+   cd Travel-Booking-Application
    ```
 
 ## Installation & Setup
